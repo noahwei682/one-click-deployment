@@ -13,7 +13,7 @@ huggingface-cli download wei682/LLaVA_data pretrain/blip_laion_cc_sbu_558k.json 
 huggingface-cli download wei682/LLaVA_data pretrain/images.tar.gz  --local-dir . --repo-type dataset
 cd pretrain/
 sudo apt install pigz
-mkdir -p images && nice -n -20 ionice -c 2 -n 0 pv -B 512M images.tar.gz | tar -I "pigz -d -p $(nproc)" -x -C images
+vmtouch -t images.tar.gz &>/dev/null; mkdir -p images && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W images.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C images --checkpoint-action=ttyout='.'
 
 huggingface-cli download wei682/LLaVA_data finetune/llava_v1_5_mix665k.json  --local-dir . --repo-type dataset
 huggingface-cli download wei682/LLaVA_data finetune/data/LLaVA-Pretrain.tar.gz  --local-dir . --repo-type dataset
