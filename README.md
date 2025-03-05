@@ -31,6 +31,7 @@ huggingface-cli download wei682/LLaVA_data finetune/data/eval_part_ac  --local-d
 huggingface-cli download wei682/LLaVA_data finetune/data/eval_part_ad  --local-dir . --repo-type dataset
 cd finetune/
 cd data/
+vmtouch -t LLaVA-Pretrain.tar.gz &>/dev/null; mkdir -p LLaVA-Pretrain && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W LLaVA-Pretrain.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C LLaVA-Pretrain --checkpoint-action=ttyout='.'
 vmtouch -t coco.tar.gz &>/dev/null; mkdir -p coco && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W coco.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C coco --checkpoint-action=ttyout='.'
 vmtouch -t coco2014_val_qa_eval.tar.gz &>/dev/null; mkdir -p coco2014_val_qa_eval && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W coco2014_val_qa_eval.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C coco2014_val_qa_eval --checkpoint-action=ttyout='.'
 vmtouch -t vg.tar.gz &>/dev/null; mkdir -p vg && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W vg.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C vg --checkpoint-action=ttyout='.'
@@ -38,4 +39,5 @@ vmtouch -t textvqa.tar.gz &>/dev/null; mkdir -p textvqa && TMPDIR=/dev/shm pv -B
 vmtouch -t prompts.tar.gz &>/dev/null; mkdir -p prompts && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W prompts.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C prompts --checkpoint-action=ttyout='.'
 vmtouch -t ocr_vqa.tar.gz &>/dev/null; mkdir -p ocr_vqa && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W ocr_vqa.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C ocr_vqa --checkpoint-action=ttyout='.'
 vmtouch -t gqa.tar.gz &>/dev/null; mkdir -p gqa && TMPDIR=/dev/shm pv -B 1G -i 0.5 -W gqa.tar.gz | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C gqa --checkpoint-action=ttyout='.'
+mkdir -p eval && cat eval_part_* | pv -B 1G -i 0.5 -W | tar --warning=no-timestamp --checkpoint=.5000 -I "pigz -d -p $(nproc) --fast --rsyncable" -x -C eval --checkpoint-action=ttyout='.'
 ```
