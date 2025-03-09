@@ -25,6 +25,7 @@ cd ..
 cd ..
 cd download_data
 python preprocess_llava_onevision_parquet.py
+cd ..
 
 export HF_TOKEN=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
 export HF_HOME=/root/autodl-tmp/huggingface
