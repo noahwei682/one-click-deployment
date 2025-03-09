@@ -13,6 +13,11 @@ pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
 
 git clone https://github.com/noahwei682/download_data.git
+cd download_data
+
+conda install -c conda-forge wandb --yes
+wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
+
 mkdir mydatasets
 cd mydatasets
 mkdir llava_onevision
@@ -23,9 +28,11 @@ mkdir FigureQA_MathV360K
 cd ..
 cd ..
 cd ..
-cd download_data
 python preprocess_llava_onevision_parquet.py
 cd ..
+
+conda install -c conda-forge wandb --yes
+wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
 
 export HF_TOKEN=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
 export HF_HOME=/root/autodl-tmp/huggingface
