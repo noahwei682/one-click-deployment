@@ -30,15 +30,4 @@ export HF_TOKEN=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
 export HF_HOME=/root/autodl-tmp/huggingface
 huggingface-cli login --token $HF_TOKEN
 
-python3 -m accelerate.commands.launch \
-    --num_processes=7 \
-    -m lmms_eval \
-    --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
-    --tasks scienceqa_img \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix llava-onevision-qwen2-7b-ov \
-    --output_path ./logs/
-    --verbosity=DEBUG \
-    --hf_hub_log_args 'hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False
+bash /root/autodl-tmp/lmms-eval/LLaVA-NeXT/scripts/train/finetune_ov_FigureQA_MathV360K.sh
