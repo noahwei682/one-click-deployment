@@ -13,6 +13,7 @@ pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
 
 export HF_TOKEN=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
+export HF_HOME=/root/autodl-tmp/huggingface
 huggingface-cli login --token $HF_TOKEN
 
 python3 -m accelerate.commands.launch \
