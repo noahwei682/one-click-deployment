@@ -30,6 +30,13 @@ cd ..
 cd ..
 python preprocess_llava_onevision_parquet.py
 cd ..
+mkdir output_dir
+cd output_dir
+mkdir checkpoints
+cd checkpoints
+mkdir onevision
+cd ..
+cd ..
 
 conda install -c conda-forge wandb --yes
 wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
