@@ -41,7 +41,7 @@ python3 -m accelerate.commands.launch \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix scienceqa_img \
+    --log_samples_suffix scienceqa_img_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -55,7 +55,7 @@ python3 -m accelerate.commands.launch \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix gqa \
+    --log_samples_suffix gqa_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -69,7 +69,7 @@ python3 -m accelerate.commands.launch \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_en \
+    --log_samples_suffix mmbench_en_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -83,7 +83,7 @@ python3 -m accelerate.commands.launch \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_cn \
+    --log_samples_suffix mmbench_cn_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -97,7 +97,7 @@ python3 -m accelerate.commands.launch \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix pope \
+    --log_samples_suffix pope_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -111,7 +111,7 @@ python3 -m accelerate.commands.launch \
     --tasks llava_in_the_wild \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix llava_in_the_wild \
+    --log_samples_suffix llava_in_the_wild_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -125,7 +125,7 @@ python3 -m accelerate.commands.launch \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mme \
+    --log_samples_suffix mme_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -139,7 +139,7 @@ python3 -m accelerate.commands.launch \
     --tasks mmvet \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmvet \
+    --log_samples_suffix mmvet_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -153,7 +153,7 @@ python3 -m accelerate.commands.launch \
     --tasks scienceqa_img,gqa,mmbench_en,mmbench_cn,pope,llava_in_the_wild,mme,mmvet,seedbench,vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix seedbench \
+    --log_samples_suffix seedbench_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -167,7 +167,7 @@ python3 -m accelerate.commands.launch \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix vizwiz_vqa \
+    --log_samples_suffix vizwiz_vqa_base_3_12 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
