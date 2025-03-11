@@ -42,7 +42,7 @@ conda install -c conda-forge wandb --yes
 wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
 
 export HF_TOKEN=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
-# export HF_HOME=/root/autodl-tmp/huggingface
+export HF_HOME=/dev/shm
 huggingface-cli login --token $HF_TOKEN
 
 export OMP_NUM_THREADS=8
