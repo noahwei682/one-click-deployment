@@ -59,3 +59,16 @@ export MASTER_ADDR=172.17.100.112
 export MASTER_PORT=23456 
 
 bash ./scripts/train/finetune_grpo_gsm8k.sh
+
+python3 -m accelerate.commands.launch \
+    --num_processes=7 \
+    -m lmms_eval \
+    --model llava \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --tasks scienceqa_img,gqa,mmbench_en,mmbench_cn,pope,llava_in_the_wild,mme,mmvet,seedbench,vizwiz_vqa \
+    --batch_size 1 \
+    --log_samples \
+    --log_samples_suffix scienceqa_img,gqa,mmbench_en,mmbench_cn,pope,llava_in_the_wild,mme,mmvet,seedbench,vizwiz_vqa \
+    --output_path ./logs/ \
+    --verbosity=DEBUG \
+    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
