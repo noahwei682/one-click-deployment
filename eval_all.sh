@@ -22,7 +22,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="liuhaotian/llava-v1.6-mistral-7b,conv_template=mistral_instruct" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
     --tasks scienceqa_img,gqa,mmbench_en,mmbench_cn,pope,llava_in_the_wild,mme,mmvet,seedbench,vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
