@@ -69,7 +69,7 @@ OUTPUT_PREFIX=$(grep "OUTPUT_PREFIX=" "$SCRIPT_PATH" | cut -d'"' -f2)
 LLM_VERSION=$(grep "LLM_VERSION=" "$SCRIPT_PATH" | cut -d'"' -f2)
 LLM_VERSION_CLEAN=$(echo $LLM_VERSION | sed 's/\//_/g')
 RUN_NAME="llava-gsm8k-${LLM_VERSION_CLEAN}-grpo"
-OUTPUT_DIR="$OUTPUT_PREFIX/$RUN_NAME"
+OUTPUT_DIR="$OUTPUT_PREFIX/$RUN_NAME/checkpoint-1400"
 
 echo "Output directory will be: $OUTPUT_DIR"
 
