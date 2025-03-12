@@ -61,7 +61,7 @@ export MASTER_PORT=23456
 
 bash ./scripts/train/finetune_grpo_gsm8k.sh
 
-SCRIPT_PATH="./LLaVA-NeXT/scripts/train/finetune_grpo_gsm8k.sh"
+SCRIPT_PATH="./scripts/train/finetune_grpo_gsm8k.sh"
 OUTPUT_PREFIX=$(grep "OUTPUT_PREFIX=" "$SCRIPT_PATH" | cut -d'"' -f2)
 LLM_VERSION=$(grep "LLM_VERSION=" "$SCRIPT_PATH" | cut -d'"' -f2)
 LLM_VERSION_CLEAN=$(echo $LLM_VERSION | sed 's/\//_/g')
