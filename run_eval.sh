@@ -61,7 +61,7 @@ export MASTER_PORT=23456
 
 bash ./scripts/train/finetune_grpo_gsm8k.sh
 
-SCRIPT_PATH="/home/harold/mhj/mproj/lmms-eval/LLaVA-NeXT/scripts/train/finetune_grpo_gsm8k.sh"
+SCRIPT_PATH="./LLaVA-NeXT/scripts/train/finetune_grpo_gsm8k.sh"
 OUTPUT_PREFIX=$(grep "OUTPUT_PREFIX=" "$SCRIPT_PATH" | cut -d'"' -f2)
 LLM_VERSION=$(grep "LLM_VERSION=" "$SCRIPT_PATH" | cut -d'"' -f2)
 LLM_VERSION_CLEAN=$(echo $LLM_VERSION | sed 's/\//_/g')
@@ -80,7 +80,7 @@ python3 -m accelerate.commands.launch \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix scienceqa_img_base_3_12 \
+    --log_samples_suffix scienceqa_img_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -94,7 +94,7 @@ python3 -m accelerate.commands.launch \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix gqa_base_3_12 \
+    --log_samples_suffix gqa_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -108,7 +108,7 @@ python3 -m accelerate.commands.launch \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_en_base_3_12 \
+    --log_samples_suffix mmbench_en_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -122,7 +122,7 @@ python3 -m accelerate.commands.launch \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_cn_base_3_12 \
+    --log_samples_suffix mmbench_cn_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -136,7 +136,7 @@ python3 -m accelerate.commands.launch \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix pope_base_3_12 \
+    --log_samples_suffix pope_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -150,7 +150,7 @@ python3 -m accelerate.commands.launch \
     --tasks llava_in_the_wild \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix llava_in_the_wild_base_3_12 \
+    --log_samples_suffix llava_in_the_wild_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -164,7 +164,7 @@ python3 -m accelerate.commands.launch \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mme_base_3_12 \
+    --log_samples_suffix mme_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -178,7 +178,7 @@ python3 -m accelerate.commands.launch \
     --tasks mmvet \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmvet_base_3_12 \
+    --log_samples_suffix mmvet_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -192,7 +192,7 @@ python3 -m accelerate.commands.launch \
     --tasks scienceqa_img,gqa,mmbench_en,mmbench_cn,pope,llava_in_the_wild,mme,mmvet,seedbench,vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix seedbench_base_3_12 \
+    --log_samples_suffix seedbench_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -206,7 +206,7 @@ python3 -m accelerate.commands.launch \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix vizwiz_vqa_base_3_12 \
+    --log_samples_suffix vizwiz_vqa_base_3_12_run_eval \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
