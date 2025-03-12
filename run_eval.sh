@@ -6,8 +6,8 @@ git clone https://github.com/EvolvingLMMs-Lab/lmms-eval
 cd lmms-eval
 pip install -e .
 
-git clone https://github.com/noahwei682/LLaVA-NeXT.git
-cd LLaVA-NeXT
+git clone https://github.com/noahwei682/llava-ov.git
+cd llava-ov
 
 pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
@@ -15,8 +15,6 @@ pip install flash-attn==2.5.2 --no-build-isolation
 git clone https://github.com/noahwei682/download_data.git
 cd download_data
 
-conda install -c conda-forge wandb --yes
-wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
 
 mkdir mydatasets
 cd mydatasets
@@ -30,14 +28,14 @@ cd ..
 cd ..
 python preprocess_llava_onevision_parquet.py
 cd ..
-mkdir output_dir
-cd output_dir
-mkdir checkpoints
-cd checkpoints
-mkdir onevision
-cd ..
-cd ..
-mkdir huggingface
+# mkdir output_dir
+# cd output_dir
+# mkdir checkpoints
+# cd checkpoints
+# mkdir onevision
+# cd ..
+# cd ..
+# mkdir huggingface
 
 conda install -c conda-forge wandb --yes
 wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
@@ -60,6 +58,7 @@ export MASTER_ADDR=172.17.100.112
 export MASTER_PORT=23456 
 
 bash ./scripts/train/finetune_grpo_gsm8k.sh
+bash ./scripts/train/finetune_ov_FigureQA_MathV360K.sh
 
 export HF_TOKEN=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
 huggingface-cli login --token $HF_TOKEN
