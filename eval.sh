@@ -11,7 +11,7 @@ git clone https://github.com/noahwei682/LLaVA-NeXT.git
 cd LLaVA-NeXT
 
 pip install -e ".[train]"
-pip install flash-attn==2.5.2 --no-build-isolation
+# pip install flash-attn==2.5.2 --no-build-isolation
 
 export HF_TOKEN=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
 # export HF_HOME=/root/autodl-tmp/huggingface
