@@ -61,6 +61,8 @@ export MASTER_PORT=23456
 
 bash ./scripts/train/finetune_grpo_gsm8k.sh
 
+export HF_TOKEN=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
+huggingface-cli login --token $HF_TOKEN
 pip install huggingface-hub
 huggingface-cli upload LLaVA_checkpoint /data/harold/mhj/output_dir/checkpoints/onevision/llava-gsm8k-lmms-lab_llava-onevision-qwen2-7b-ov-grpo ./llava_next/grpo --repo-type dataset
 
