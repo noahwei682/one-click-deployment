@@ -27,8 +27,7 @@ python3 -m accelerate.commands.launch \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix llava-onevision-qwen2-7b-ov \
+    --log_samples_suffix llava-onevision-qwen2-7b-ov-scienceqa_img \
     --output_path ./logs/
     --verbosity=DEBUG \
-    --device "cuda:0,cuda:1,cuda:2,cuda:3,cuda:4"
     --hf_hub_log_args 'hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False
