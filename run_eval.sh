@@ -57,7 +57,7 @@ export NODE_RANK=0
 export MASTER_ADDR=172.17.100.112 
 export MASTER_PORT=23456 
 
-bash ./scripts/train/finetune_grpo_gsm8k.sh
+# bash ./scripts/train/finetune_grpo_gsm8k.sh
 bash ./scripts/train/finetune_ov_FigureQA_MathV360K.sh
 
 export HF_TOKEN=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
