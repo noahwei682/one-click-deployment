@@ -11,6 +11,8 @@ cd llava-ov
 
 pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
+pip install ipdb
+
 
 git clone https://github.com/noahwei682/download_data.git
 cd download_data
