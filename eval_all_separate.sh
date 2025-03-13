@@ -37,11 +37,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix scienceqa_img_base_3_12 \
+    --log_samples_suffix scienceqa_img_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -51,11 +51,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix gqa_base_3_12 \
+    --log_samples_suffix gqa_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -65,11 +65,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_en_base_3_12 \
+    --log_samples_suffix mmbench_en_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -79,11 +79,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_cn_base_3_12 \
+    --log_samples_suffix mmbench_cn_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -93,11 +93,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix pope_base_3_12 \
+    --log_samples_suffix pope_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -107,11 +107,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks llava_in_the_wild \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix llava_in_the_wild_base_3_12 \
+    --log_samples_suffix llava_in_the_wild_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -121,11 +121,40 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mme_base_3_12 \
+    --log_samples_suffix mme_chat_3_13 \
+    --output_path ./logs/ \
+    --verbosity=DEBUG \
+    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
+
+
+
+
+python3 -m accelerate.commands.launch \
+    --num_processes=7 \
+    -m lmms_eval \
+    --model llava \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
+    --tasks textvqa \
+    --batch_size 1 \
+    --log_samples \
+    --log_samples_suffix textvqa_chat_3_13 \
+    --output_path ./logs/ \
+    --verbosity=DEBUG \
+    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
+
+python3 -m accelerate.commands.launch \
+    --num_processes=7 \
+    -m lmms_eval \
+    --model llava \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
+    --tasks vqav2 \
+    --batch_size 1 \
+    --log_samples \
+    --log_samples_suffix vqav2_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -135,39 +164,43 @@ python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks mmvet \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmvet_base_3_12 \
+    --log_samples_suffix mmvet_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
+
+
 
 
 python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
-    --tasks scienceqa_img,gqa,mmbench_en,mmbench_cn,pope,llava_in_the_wild,mme,mmvet,seedbench,vizwiz_vqa \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
+    --tasks seedbench \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix seedbench_base_3_12 \
+    --log_samples_suffix seedbench_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
+
+
 
 
 python3 -m accelerate.commands.launch \
     --num_processes=7 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov" \
+    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix vizwiz_vqa_base_3_12 \
+    --log_samples_suffix vizwiz_vqa_chat_3_13 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
