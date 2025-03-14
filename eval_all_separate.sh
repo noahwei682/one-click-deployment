@@ -103,19 +103,6 @@ python3 -m accelerate.commands.launch \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
 
 
-python3 -m accelerate.commands.launch \
-    --num_processes=7 \
-    -m lmms_eval \
-    --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
-    --tasks llava_in_the_wild \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix llava_in_the_wild_chat_3_13 \
-    --output_path ./logs/ \
-    --verbosity=DEBUG \
-    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
-
 
 python3 -m accelerate.commands.launch \
     --num_processes=7 \
@@ -130,48 +117,6 @@ python3 -m accelerate.commands.launch \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
 
-
-
-
-python3 -m accelerate.commands.launch \
-    --num_processes=7 \
-    -m lmms_eval \
-    --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
-    --tasks textvqa \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix textvqa_chat_3_13 \
-    --output_path ./logs/ \
-    --verbosity=DEBUG \
-    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
-
-python3 -m accelerate.commands.launch \
-    --num_processes=7 \
-    -m lmms_eval \
-    --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
-    --tasks vqav2 \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix vqav2_chat_3_13 \
-    --output_path ./logs/ \
-    --verbosity=DEBUG \
-    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
-
-
-python3 -m accelerate.commands.launch \
-    --num_processes=7 \
-    -m lmms_eval \
-    --model llava \
-    --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
-    --tasks mmvet \
-    --batch_size 1 \
-    --log_samples \
-    --log_samples_suffix mmvet_chat_3_13 \
-    --output_path ./logs/ \
-    --verbosity=DEBUG \
-    --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
 
 
 
