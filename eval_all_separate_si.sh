@@ -3,11 +3,15 @@ source activate llava-next
 conda activate llava-next
 pip install --upgrade pip  # Enable PEP 660 support.
 
-git clone https://github.com/EvolvingLMMs-Lab/lmms-eval
+
+
+git clone https://github.com/EvolvingLMMs-Lab/lmms-eval.git
+# git clone https://ghproxy.net/https://github.com/EvolvingLMMs-Lab/lmms-eval.git
 cd lmms-eval
 pip install -e .
 
 git clone https://github.com/LLaVA-VL/LLaVA-NeXT.git
+# git clone https://ghproxy.net/https://github.com/LLaVA-VL/LLaVA-NeXT.git
 cd LLaVA-NeXT
 
 pip install -e ".[train]"
@@ -15,6 +19,7 @@ pip install flash-attn==2.5.2 --no-build-isolation
 
 export HF_TOKEN=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
 # export HF_HOME=/root/autodl-tmp/huggingface   (本地较大的路径)
+export HF_HOME=/data3/szs/hz/
 huggingface-cli login --token $HF_TOKEN
 
 
