@@ -22,6 +22,8 @@ export HF_TOKEN=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
 export HF_HOME=/data3/szs/hz/
 huggingface-cli login --token $HF_TOKEN
 
+export MASTER_ADDR="l192.168.1.100"  # 设置主节点地址
+export MASTER_PORT=1235  
 
 # python3 -m accelerate.commands.launch \
 #     --num_processes=7 \
