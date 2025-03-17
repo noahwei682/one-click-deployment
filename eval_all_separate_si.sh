@@ -7,7 +7,7 @@ git clone https://github.com/EvolvingLMMs-Lab/lmms-eval
 cd lmms-eval
 pip install -e .
 
-git clone https://github.com/noahwei682/LLaVA-NeXT.git
+git clone https://github.com/LLaVA-VL/LLaVA-NeXT.git
 cd LLaVA-NeXT
 
 pip install -e ".[train]"
