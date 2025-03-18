@@ -41,7 +41,7 @@ export MASTER_PORT=1235
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -55,7 +55,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -69,7 +69,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -83,7 +83,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -97,7 +97,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -112,7 +112,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -129,7 +129,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
@@ -145,7 +145,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=4 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-si" \
