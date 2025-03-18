@@ -62,7 +62,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=3 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
@@ -76,7 +76,7 @@ python3 -m accelerate.commands.launch \
 
 
 python3 -m accelerate.commands.launch \
-    --num_processes=7 \
+    --num_processes=3 \
     -m lmms_eval \
     --model llava \
     --model_args pretrained="lmms-lab/llava-onevision-qwen2-7b-ov-chat" \
