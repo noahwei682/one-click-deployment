@@ -47,7 +47,7 @@ export HF_TOKEN=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
 # export HF_HOME=/scratch
 pip install huggingface_hub
 pip install urllib3
-huggingface-cli login --token $$HF_TOKEN
+huggingface-cli login --token $HF_TOKEN
 
 # - export OMP_NUM_THREADS=7
 export NCCL_IB_DISABLE=1
