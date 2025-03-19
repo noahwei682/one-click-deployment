@@ -58,7 +58,7 @@ export ACCELERATE_CPU_AFFINITY=1
 export NPROC_PER_NODE=4
 export NODES=1 
 export NODE_RANK=0 
-export WORLD_SIZE=4
+# export WORLD_SIZE=4
 # - export MASTER_ADDR="10.36.38.89"
 # - export MASTER_PORT="23456"
 
