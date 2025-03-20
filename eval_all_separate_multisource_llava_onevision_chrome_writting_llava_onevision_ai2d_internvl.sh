@@ -43,7 +43,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
@@ -57,7 +57,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
@@ -71,7 +71,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
@@ -85,7 +85,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
@@ -99,7 +99,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
@@ -114,7 +114,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
@@ -131,7 +131,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks seedbench \
     --batch_size 1 \
     --log_samples \
@@ -147,7 +147,7 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
+    --model_args pretrained="" \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
