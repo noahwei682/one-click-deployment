@@ -9,9 +9,9 @@ git clone https://github.com/EvolvingLMMs-Lab/lmms-eval.git
 cd lmms-eval
 pip install -e .
 
-git clone https://github.com/LLaVA-VL/LLaVA-NeXT.git
+git clone https://github.com/noahwei682/llava-ov-ewc.git
 # git clone https://ghproxy.net/https://github.com/LLaVA-VL/LLaVA-NeXT.git
-cd LLaVA-NeXT
+cd llava-ov-ewc
 
 pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
@@ -43,11 +43,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix scienceqa_img_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix scienceqa_img_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -57,11 +57,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix gqa_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix gqa_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -71,11 +71,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_en_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix mmbench_en_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -85,11 +85,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_cn_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix mmbench_cn_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -99,11 +99,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix pope_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix pope_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -114,11 +114,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mme_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix mme_chrome_writting_ai2d_internvlb \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -131,11 +131,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks seedbench \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix seedbench_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix seedbench_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -147,11 +147,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Salesforce/instructblip-vicuna-7b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1" \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix vizwiz_salesforce_instructblip_vicuna_7b \
+    --log_samples_suffix vizwiz_chrome_writting_ai2d_internvl \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
