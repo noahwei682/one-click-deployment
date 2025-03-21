@@ -43,11 +43,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix scienceqa_img_nyu_visionx_cambrian_8b \
+    --log_samples_suffix scienceqa_img_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -57,11 +57,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix gqa_nyu_visionx_cambrian_8b \
+    --log_samples_suffix gqa_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -71,11 +71,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_en_nyu_visionx_cambrian_8b \
+    --log_samples_suffix mmbench_en_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -85,11 +85,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_cn_nyu_visionx_cambrian_8b \
+    --log_samples_suffix mmbench_cn_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -99,11 +99,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix pope_nyu_visionx_cambrian_8b \
+    --log_samples_suffix pope_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -114,11 +114,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mme_nyu_visionx_cambrian_8b \
+    --log_samples_suffix mme_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -131,11 +131,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks seedbench \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix seedbench_nyu_visionx_cambrian_8b \
+    --log_samples_suffix seedbench_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -147,11 +147,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="nyu-visionx/cambrian-8b" \
+    --model_args pretrained="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda1-amazon-multisource/checkpoint-950" \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix vizwiz_vqa_nyu_visionx_cambrian_8b \
+    --log_samples_suffix vizwiz_vqa_ewc_lambda1_amazon_multisource \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
