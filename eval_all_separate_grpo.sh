@@ -43,11 +43,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks scienceqa_img \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix scienceqa_img_qwen25_7b_instruct \
+    --log_samples_suffix scienceqa_img_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -57,11 +57,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks gqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix gqa_chat_qwen25_7b_instruct \
+    --log_samples_suffix gqa_chat_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -71,11 +71,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks mmbench_en \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_en_qwen25_7b_instruct \
+    --log_samples_suffix mmbench_en_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -85,11 +85,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks mmbench_cn \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mmbench_cn_qwen25_7b_instruct \
+    --log_samples_suffix mmbench_cn_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -99,11 +99,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks pope \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix pope_qwen25_7b_instruct \
+    --log_samples_suffix pope_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -114,11 +114,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks mme \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix mme_qwen25_7b_instruct \
+    --log_samples_suffix mme_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -131,11 +131,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks seedbench \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix seedbench_qwen25_7b_instruct \
+    --log_samples_suffix seedbench_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
@@ -147,11 +147,11 @@ python3 -m accelerate.commands.launch \
     --num_processes=4 \
     -m lmms_eval \
     --model llava \
-    --model_args pretrained="Qwen/Qwen2.5-VL-7B-Instruct" \
+    --model_args pretrained="/home/aiscuser/lmms-eval/llava-ov-ewc-grpo/output_dir/checkpoints/gsm8k-llava-onevision-qwen2-7b-ov-grpo/checkpoint-500" \
     --tasks vizwiz_vqa \
     --batch_size 1 \
     --log_samples \
-    --log_samples_suffix vizwiz_vqa_qwen25_7b_instruct \
+    --log_samples_suffix vizwiz_vqa_grpo500 \
     --output_path ./logs/ \
     --verbosity=DEBUG \
     --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
