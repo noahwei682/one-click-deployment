@@ -13,23 +13,25 @@ pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
 
 conda install -c conda-forge wandb --yes
+pip install pydantic --upgrade
 wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
 
 export HF_TOKEN=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
 # export HF_HOME=/data/harold/mhj/huggingface
 huggingface-cli login --token $HF_TOKEN
 
-export OMP_NUM_THREADS=8
-export NCCL_IB_DISABLE=0
-export NCCL_IB_GID_INDEX=3
-export NCCL_SOCKET_IFNAME=br-intranet
-export NCCL_DEBUG=INFO
 
-export ACCELERATE_CPU_AFFINITY=1 
-export NPROC_PER_NODE=8 
-export NODES=1 
-export NODE_RANK=0 
-export MASTER_ADDR=172.17.100.112 
-export MASTER_PORT=23456 
+# export OMP_NUM_THREADS=8
+# export NCCL_IB_DISABLE=0
+# export NCCL_IB_GID_INDEX=3
+# export NCCL_SOCKET_IFNAME=br-intranet
+# export NCCL_DEBUG=INFO
+
+# export ACCELERATE_CPU_AFFINITY=1 
+# export NPROC_PER_NODE=8 
+# export NODES=1 
+# export NODE_RANK=0 
+# export MASTER_ADDR=172.17.100.112 
+# export MASTER_PORT=23456 
 
 bash ./scripts/train/grpo_finetune_gsm8k.sh
