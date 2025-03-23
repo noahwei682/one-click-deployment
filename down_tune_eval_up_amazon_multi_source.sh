@@ -34,7 +34,7 @@ huggingface-cli download wei682/amazon meta_Movies_and_TV_exist_gene_ITdata.json
 huggingface-cli download wei682/amazon meta_Beauty_and_Personal_Care_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 huggingface-cli download wei682/amazon meta_Electronics_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 huggingface-cli download wei682/amazon meta_Appliances_exist_gene_ITdata.json --repo-type dataset  --local-dir .
-huggingface-cli download wei682/amazon meta_Cell_Phones_and_Accessories_exist_gene_ITdata.json --repo-type dataset .
+huggingface-cli download wei682/amazon meta_Cell_Phones_and_Accessories_exist_gene_ITdata.json --repo-type dataset --local-dir .
 huggingface-cli download wei682/amazon meta_Grocery_and_Gourmet_Food_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 huggingface-cli download wei682/amazon meta_Sports_and_Outdoors_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 huggingface-cli download wei682/amazon meta_Magazine_Subscriptions_exist_gene_ITdata.json --repo-type dataset  --local-dir .
