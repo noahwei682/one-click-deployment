@@ -43,6 +43,7 @@ huggingface-cli download wei682/amazon meta_Toys_and_Games_exist_gene_ITdata.jso
 huggingface-cli download wei682/amazon meta_All_Beauty_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 huggingface-cli download wei682/amazon meta_Patio_Lawn_and_Garden_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 huggingface-cli download wei682/amazon meta_Gift_Cards_exist_gene_ITdata.json --repo-type dataset  --local-dir .
+cd ..
 
 export NCCL_IB_DISABLE=1
 export NCCL_DEBUG=INFO
@@ -53,6 +54,7 @@ export NODE_RANK=0
 
 export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda01-amazon-multisource-all"
 export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda01-amazon-multisource-all"
+# export DATA_DIR="/home/aiscuser/lmms-eval/llava-ov-ewc-ms/msdata/"
 export PREV_STAGE_CHECKPOINT="lmms-lab/llava-onevision-qwen2-7b-si"
 
 bash ./scripts/train/finetune_ov_multisource_amazon.sh
