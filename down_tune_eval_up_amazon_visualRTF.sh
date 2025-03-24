@@ -70,14 +70,12 @@ export PREV_STAGE_CHECKPOINT="lmms-lab/llava-onevision-qwen2-7b-si"
 
 bash ./scripts/train/finetune_grpo.sh
 
-huggingface-cli upload LLaVA_checkpoint /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot ./qwen2-7b-si-ewc-lambda01-amazon-multisource-all --repo-type dataset
 sudo apt-get install jq
->
-  jq '. + {"vocab_size": 152064}' \
-  /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json \
-  > /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/tmp.json && \
-  mv /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/tmp.json \
-  /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json
+# jq '. + {"vocab_size": 152064}' /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda01-amazon-multisource-all/config.json > temp.json && mv temp.json /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda01-amazon-multisource-all/config.json
+jq '. + {"vocab_size": 152064}' /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json > temp.json && mv temp.json /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json
+
+huggingface-cli upload LLaVA_checkpoint /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot ./qwen2-7b-si-ewc-lambda01-amazon-multisource-all --repo-type dataset
+
 python3 -m accelerate.commands.launch --num_processes 4 -m lmms_eval --model llava --model_args pretrained=/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot --tasks scienceqa_img --batch_size 1 --log_samples --log_samples_suffix scienceqa_img-ViRFT_CLS_flower_4_shot --output_path ./logs/ --verbosity=DEBUG --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
 python3 -m accelerate.commands.launch --num_processes 4 -m lmms_eval --model llava --model_args pretrained=/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot --tasks gqa --batch_size 1 --log_samples --log_samples_suffix gqa-ViRFT_CLS_flower_4_shot --output_path ./logs/ --verbosity=DEBUG --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
 python3 -m accelerate.commands.launch --num_processes 4 -m lmms_eval --model llava --model_args pretrained=/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot --tasks mmbench_en --batch_size 1 --log_samples --log_samples_suffix mmbench_en-ViRFT_CLS_flower_4_shot --output_path ./logs/ --verbosity=DEBUG --hf_hub_log_args hub_repo_name=lm-eval-results,push_results_to_hub=True,push_samples_to_hub=True,public_repo=False 
