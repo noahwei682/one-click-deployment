@@ -70,9 +70,9 @@ export PREV_STAGE_CHECKPOINT="lmms-lab/llava-onevision-qwen2-7b-si"
 
 bash ./scripts/train/finetune_grpo.sh
 
-sudo apt-get install jq
+# sudo apt-get install jq
 # jq '. + {"vocab_size": 152064}' /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda01-amazon-multisource-all/config.json > temp.json && mv temp.json /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-lambda01-amazon-multisource-all/config.json
-jq '. + {"vocab_size": 152064}' /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json > temp.json && mv temp.json /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json
+# jq '. + {"vocab_size": 152064}' /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json > temp.json && mv temp.json /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot/config.json
 
 huggingface-cli upload LLaVA_checkpoint /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot ./qwen2-7b-si-ewc-lambda01-amazon-multisource-all --repo-type dataset
 
