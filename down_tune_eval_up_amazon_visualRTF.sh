@@ -54,7 +54,7 @@ huggingface-cli download laolao77/ViRFT_CLS_flower_4_shot --repo-type dataset  -
 # huggingface-cli download wei682/amazon meta_All_Beauty_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 # huggingface-cli download wei682/amazon meta_Patio_Lawn_and_Garden_exist_gene_ITdata.json --repo-type dataset  --local-dir .
 # huggingface-cli download wei682/amazon meta_Gift_Cards_exist_gene_ITdata.json --repo-type dataset  --local-dir .
-cd ..
+# cd ..
 
 export NCCL_IB_DISABLE=1
 export NCCL_DEBUG=INFO
