@@ -7,8 +7,8 @@ git clone https://github.com/EvolvingLMMs-Lab/lmms-eval
 cd lmms-eval
 pip install -e .
 
-git clone https://github.com/noahwei682/llava-ov-ewc-ms.git
-cd llava-ov-ewc-ms/
+git clone https://github.com/noahwei682/llava-ov-ewc-ms-grpo.git
+cd llava-ov-ewc-ms-grpo/
 
 pip install -e ".[train]"
 pip install flash-attn==2.5.2 --no-build-isolation
