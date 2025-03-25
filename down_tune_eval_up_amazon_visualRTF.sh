@@ -63,8 +63,8 @@ export NPROC_PER_NODE=4
 export NODES=1 
 export NODE_RANK=0 
 
-export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot"
-export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot"
+export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot_debug"
+export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-ViRFT_CLS_flower_4_shot_debug"
 # export DATA_DIR="/home/aiscuser/lmms-eval/llava-ov-ewc-ms/msdata/"
 export PREV_STAGE_CHECKPOINT="lmms-lab/llava-onevision-qwen2-7b-si"
 
