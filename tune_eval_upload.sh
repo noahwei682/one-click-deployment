@@ -62,8 +62,8 @@ export NODE_RANK=0
 # - export MASTER_ADDR="10.36.38.89"
 # - export MASTER_PORT="23456"
 
-export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-grpo-try2"
-export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-grpo-try2"
+export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-amaon-ms-detail"
+export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-amaon-ms-detail"
 export PREV_STAGE_CHECKPOINT="lmms-lab/llava-onevision-qwen2-7b-si"
 bash ./scripts/train/finetune_ov_FigureQA_MathV360K.sh
 huggingface-cli upload LLaVA_checkpoint /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1/checkpoint-10 ./llava-onevision-qwen2-7b-si-ewc-lambda-1 --repo-type dataset
