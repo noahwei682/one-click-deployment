@@ -67,6 +67,10 @@ export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-s
 export PREV_STAGE_CHECKPOINT="lmms-lab/llava-onevision-qwen2-7b-si"
 bash ./scripts/train/finetune_ov_FigureQA_MathV360K.sh
 huggingface-cli upload LLaVA_checkpoint /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewc-stage-lambda-1/checkpoint-10 ./llava-onevision-qwen2-7b-si-ewc-lambda-1 --repo-type dataset
+
+huggingface-cli upload LLaVA_checkpoint /blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-amaon-ms-detail/checkpoint-100 ./qwen2-7b-si-amaon-ms-detail-checkpoint-100 --repo-type dataset
+
+
 sudo apt-get install jq
 >
   jq '. + {"vocab_size": 152064}' \
