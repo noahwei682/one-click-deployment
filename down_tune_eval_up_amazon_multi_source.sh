@@ -62,8 +62,8 @@ export NODE_RANK=0
 # export OUTPUT_DIR="/blob/weiwei/llava_checkpoint//blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-ewcno-lambda0-amazon-multisource-all"
 
 
-export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-v1-ms-data-lora-rank4"
-export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-v1-ms-data-lora-rank4"
+export RUN_NAME="llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-v1-lora-rank4-ms-detail"
+export OUTPUT_DIR="/blob/weiwei/llava_checkpoint/llava-onevision-google-siglip-so400m-patch14-384-lmms-lab-llava-onevision-qwen2-7b-si-v1-lora-rank4-ms-detail"
 
 
 # export DATA_DIR="/home/aiscuser/lmms-eval/llava-ov-ewc-ms/msdata/"
